@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YoRHa // Alen Ismagambetov</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="sys-message" id="sys-message" aria-live="polite"></div>
+
+  <!-- ========== BOOT SCREEN ========== -->
+  <div id="boot-screen">
+    <div class="boot-logo">
+      <div class="boot-logo-text">YoRHa</div>
+      <div class="boot-logo-sub">TACTICAL ANDROID DATABASE // OPERATOR INTERFACE</div>
+    </div>
+    <div class="boot-log" id="boot-log"></div>
+    <div class="boot-progress-wrap">
+      <div class="boot-progress-bar" id="boot-progress-bar"></div>
+    </div>
+    <button class="boot-skip" id="boot-skip">[ SKIP INTRO ]</button>
+  </div>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <div id="main-content" class="hidden">
+
+    <!-- NAVIGATION -->
+    <nav id="nav">
+      <div class="nav-left">
+        <span class="nav-logo">YoRHa</span>
+        <span class="nav-sep">//</span>
+        <span class="nav-coords" id="nav-coords">N:48.8566 E:2.3522</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero"     class="nav-link active" data-section="hero">UNIT</a></li>
+        <li><a href="#skills"   class="nav-link"        data-section="skills">SPECS</a></li>
+        <li><a href="#projects" class="nav-link"        data-section="projects">OPS</a></li>
+        <li><a href="#contact"  class="nav-link"        data-section="contact">SIGNAL</a></li>
+      </ul>
+      <div class="nav-right">
+        <span class="nav-status">&#9632; ONLINE</span>
+        <span class="nav-time" id="nav-time">00:00:00</span>
+      </div>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section id="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-bg-text" aria-hidden="true">
+        <span>機械生命体</span>
+        <span>アンドロイド</span>
+        <span>ヨルハ部隊</span>
+        <span>戦闘型</span>
+        <span>栄光は人類のために</span>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-label">UNIT DESIGNATION</div>
+        <div class="hero-divider"></div>
+        <h1 class="hero-name glitch" data-text="ALEN ISMAGAMBETOV">ALEN ISMAGAMBETOV</h1>
+        <div class="hero-role">
+          <span class="hero-role-prefix">&gt;&nbsp;</span>
+          <span id="hero-role-text"></span>
+          <span class="cursor">_</span>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-label">TYPE</span>
+            <span class="hero-stat-value">Combat Android Unit</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-label">STATUS</span>
+            <span class="hero-stat-value status-online">&#9632; ONLINE</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-label">OPERATIONAL</span>
+            <span class="hero-stat-value" id="hero-days">---- DAYS</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">[ VIEW OPERATIONS ]</a>
+          <a href="#contact"  class="btn btn-secondary">[ OPEN CHANNEL ]</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>SCROLL TO PROCEED</span>
+        <div class="hero-scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section id="skills">
+      <div class="section-header fade-in">
+        <div class="section-label">DATABASE ENTRY // 001</div>
+        <h2 class="section-title">UNIT <span class="accent">SPECIFICATIONS</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-category-num">01</span>
+            <span class="skill-category-name">PROGRAMMING</span>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">C#</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+              <span class="skill-pct">100%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">C++</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+              <span class="skill-pct">100%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
+              <span class="skill-pct">70%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="60"></div></div>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">HTML / CSS</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+              <span class="skill-pct">90%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-category-num">02</span>
+            <span class="skill-category-name">ENGINES &amp; NETWORKING</span>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Unity URP/HDRP</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+              <span class="skill-pct">100%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Unreal Engine 5</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="20"></div></div>
+              <span class="skill-pct">20%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Photon Fusion</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="50"></div></div>
+              <span class="skill-pct">50%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">UDP</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="50"></div></div>
+              <span class="skill-pct">50%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-category-num">03</span>
+            <span class="skill-category-name">AUDIO &amp; TOOLS</span>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">FMOD</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+              <span class="skill-pct">100%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">FL Studio</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="60"></div></div>
+              <span class="skill-pct">60%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Git / Jira</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+              <span class="skill-pct">100%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Blender / GIMP</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="40"></div></div>
+              <span class="skill-pct">40%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">DOTween</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+              <span class="skill-pct">75%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-category-num">04</span>
+            <span class="skill-category-name">LANGUAGES</span>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">English (C1)</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="85"></div></div>
+              <span class="skill-pct">C1</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Russian</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+              <span class="skill-pct">Native</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Kazakh</span>
+              <div class="skill-bar"><div class="skill-bar-fill" data-width="100"></div></div>
+              <span class="skill-pct">Native</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section id="projects">
+      <div class="section-header fade-in">
+        <div class="section-label">DATABASE ENTRY // 002</div>
+        <h2 class="section-title">OPERATION <span class="accent">RECORDS</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- OP-001: Novis -->
+        <div class="project-card">
+          <div class="card-corner card-corner-tl"></div>
+          <div class="card-corner card-corner-tr"></div>
+          <div class="card-corner card-corner-bl"></div>
+          <div class="card-corner card-corner-br"></div>
+          <div class="project-img-wrap">
+            <img src="src/CardGame.jpg" alt="Novis — Card RPG">
+          </div>
+          <div class="project-card-inner">
+            <div class="project-card-header">
+              <span class="project-num">OP-001</span>
+              <span class="project-status status-progress">&#9672; IN PROGRESS</span>
+            </div>
+            <h3 class="project-title">Novis — Card RPG</h3>
+            <p class="project-desc">
+              Card-based RPG in active development. Strategic card gameplay with deep RPG
+              mechanics, built in Unity with FMOD audio integration.
+            </p>
+            <p class="project-meta">In Development: 2025 – Present</p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">FMOD</span>
+              <span class="tech-tag">Card Game</span>
+              <span class="tech-tag">RPG</span>
+            </div>
+            <div class="project-links">
+              <a href="https://freetile.itch.io/novis" class="project-link" target="_blank" rel="noopener">[ ITCH.IO ]</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- OP-002: FeatherInk -->
+        <div class="project-card">
+          <div class="card-corner card-corner-tl"></div>
+          <div class="card-corner card-corner-tr"></div>
+          <div class="card-corner card-corner-bl"></div>
+          <div class="card-corner card-corner-br"></div>
+          <div class="project-img-wrap">
+            <img src="src/featherink.jpg" alt="FeatherInk">
+          </div>
+          <div class="project-card-inner">
+            <div class="project-card-header">
+              <span class="project-num">OP-002</span>
+              <span class="project-status status-progress">&#9672; IN PROGRESS</span>
+            </div>
+            <h3 class="project-title">FeatherInk</h3>
+            <p class="project-desc">
+              A dark black-and-white roguelike where you build a hand like modified blackjack —
+              enhance cards and passives, then convert a lucky deal into damage against your enemy.
+            </p>
+            <p class="project-meta">In Development: Mar 2026 – Present</p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">Roguelike</span>
+              <span class="tech-tag">Card Game</span>
+              <span class="tech-tag">DOTween</span>
+            </div>
+            <div class="project-links">
+              <button class="project-link play-btn" id="play-featherink">[ PLAY DEMO ]</button>
+              <a href="https://freetile.itch.io/featherink" class="project-link" target="_blank" rel="noopener">[ ITCH.IO ]</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FEATHERINK PLAY MODAL -->
+        <div class="game-modal-overlay" id="game-modal" aria-hidden="true">
+          <div class="game-modal">
+            <div class="game-modal-corner game-modal-corner-tl"></div>
+            <div class="game-modal-corner game-modal-corner-tr"></div>
+            <div class="game-modal-corner game-modal-corner-bl"></div>
+            <div class="game-modal-corner game-modal-corner-br"></div>
+            <div class="game-modal-header">
+              <span class="game-modal-title">&gt; FEATHERINK // LIVE DEMO</span>
+              <button class="game-modal-close" id="game-modal-close">[ CLOSE ]</button>
+            </div>
+            <div class="game-modal-body">
+              <iframe
+                id="game-iframe"
+                src=""
+                data-src="game/index.html"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="game-modal-footer">
+              <span>ESC TO CLOSE</span>
+              <span>&#9632; SIGNAL ACTIVE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- OP-003: The Whisper -->
+        <div class="project-card">
+          <div class="card-corner card-corner-tl"></div>
+          <div class="card-corner card-corner-tr"></div>
+          <div class="card-corner card-corner-bl"></div>
+          <div class="card-corner card-corner-br"></div>
+          <div class="project-img-wrap">
+            <img src="src/whsiperbg.png" alt="The Whisper">
+          </div>
+          <div class="project-card-inner">
+            <div class="project-card-header">
+              <span class="project-num">OP-003</span>
+              <span class="project-status status-complete">&#9632; COMPLETE</span>
+            </div>
+            <h3 class="project-title">The Whisper</h3>
+            <p class="project-desc">
+              Small horror game prototype made in Unity and FMOD,
+              inspired by Amnesia: The Dark Descent.
+            </p>
+            <p class="project-meta">Created: April 2025</p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">FMOD</span>
+              <span class="tech-tag">Horror</span>
+            </div>
+            <div class="project-links">
+              <a href="https://sh1rax.itch.io/the-whisper" class="project-link" target="_blank" rel="noopener">[ ITCH.IO ]</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- OP-004: BobbleHead Wars -->
+        <div class="project-card">
+          <div class="card-corner card-corner-tl"></div>
+          <div class="card-corner card-corner-tr"></div>
+          <div class="card-corner card-corner-bl"></div>
+          <div class="card-corner card-corner-br"></div>
+          <div class="project-img-wrap">
+            <img src="src/BobbleHeadWars.png" alt="BobbleHead Wars">
+          </div>
+          <div class="project-card-inner">
+            <div class="project-card-header">
+              <span class="project-num">OP-004</span>
+              <span class="project-status status-complete">&#9632; COMPLETE</span>
+            </div>
+            <h3 class="project-title">BobbleHead Wars</h3>
+            <p class="project-desc">
+              Third-person shooter game prototype made in Unity
+              with tutorial in college course.
+            </p>
+            <p class="project-meta">Created: November 2024</p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">C#</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/sh1raxx" class="project-link" target="_blank" rel="noopener">[ GITHUB ]</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- OP-005: RobotRampage -->
+        <div class="project-card">
+          <div class="card-corner card-corner-tl"></div>
+          <div class="card-corner card-corner-tr"></div>
+          <div class="card-corner card-corner-bl"></div>
+          <div class="card-corner card-corner-br"></div>
+          <div class="project-img-wrap">
+            <img src="src/RobotRampage.png" alt="RobotRampage">
+          </div>
+          <div class="project-card-inner">
+            <div class="project-card-header">
+              <span class="project-num">OP-005</span>
+              <span class="project-status status-complete">&#9632; COMPLETE</span>
+            </div>
+            <h3 class="project-title">RobotRampage</h3>
+            <p class="project-desc">
+              First-person shooter game prototype made in Unity
+              for tutorial in college course.
+            </p>
+            <p class="project-meta">Created: December 2024</p>
+            <div class="project-tech">
+              <span class="tech-tag">Unity</span>
+              <span class="tech-tag">C#</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/sh1raxx" class="project-link" target="_blank" rel="noopener">[ GITHUB ]</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- OP-006: Flappy Bird Clone -->
+        <div class="project-card">
+          <div class="card-corner card-corner-tl"></div>
+          <div class="card-corner card-corner-tr"></div>
+          <div class="card-corner card-corner-bl"></div>
+          <div class="card-corner card-corner-br"></div>
+          <div class="project-img-wrap">
+            <img src="src/FlappyBird.jpg" alt="Flappy Bird Clone">
+          </div>
+          <div class="project-card-inner">
+            <div class="project-card-header">
+              <span class="project-num">OP-006</span>
+              <span class="project-status status-complete">&#9632; COMPLETE</span>
+            </div>
+            <h3 class="project-title">Flappy Bird Clone</h3>
+            <p class="project-desc">
+              Basic Flappy Bird clone built with the Phaser.io game framework.
+            </p>
+            <p class="project-meta">Created: 2024</p>
+            <div class="project-tech">
+              <span class="tech-tag">Phaser.io</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/sh1raxx" class="project-link" target="_blank" rel="noopener">[ GITHUB ]</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section id="contact">
+      <div class="section-header fade-in">
+        <div class="section-label">DATABASE ENTRY // 003</div>
+        <h2 class="section-title">OPEN <span class="accent">TRANSMISSION</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-content fade-in">
+        <div class="contact-text">
+          <p class="contact-intro">&gt; CONNECTION ESTABLISHED</p>
+          <p class="contact-desc">
+            Seeking collaboration or have a mission in mind?<br>
+            Open a channel and I will respond within 24 hours.
+          </p>
+          <div class="contact-deco" aria-hidden="true">
+            <span>通信回線を開いてください</span>
+          </div>
+        </div>
+
+        <div class="contact-channels">
+          <a href="mailto:shhh1rax@gmail.com" class="contact-channel">
+            <div class="contact-channel-icon">&#9993;</div>
+            <div class="contact-channel-info">
+              <span class="contact-channel-label">EMAIL</span>
+              <span class="contact-channel-value">shhh1rax@gmail.com</span>
+            </div>
+            <span class="contact-channel-arrow">&rarr;</span>
+          </a>
+
+          <a href="https://github.com/sh1raxx" class="contact-channel" target="_blank" rel="noopener noreferrer">
+            <div class="contact-channel-icon">&#8853;</div>
+            <div class="contact-channel-info">
+              <span class="contact-channel-label">GITHUB</span>
+              <span class="contact-channel-value">github.com/sh1raxx</span>
+            </div>
+            <span class="contact-channel-arrow">&rarr;</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/sh1rax/" class="contact-channel" target="_blank" rel="noopener noreferrer">
+            <div class="contact-channel-icon">&#9672;</div>
+            <div class="contact-channel-info">
+              <span class="contact-channel-label">LINKEDIN</span>
+              <span class="contact-channel-value">linkedin.com/in/sh1rax</span>
+            </div>
+            <span class="contact-channel-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top-line"></div>
+      <div class="footer-content">
+        <div class="footer-logo">YoRHa</div>
+        <div class="footer-text">
+          <span>FOR THE GLORY OF MANKIND</span>
+          <span class="footer-sep">|</span>
+          <span>栄光は人類のために</span>
+        </div>
+        <div class="footer-copy">&copy; 2026 Alen Ismagambetov. ALL RIGHTS RESERVED.</div>
+      </div>
+    </footer>
+
+  </div><!-- /main-content -->
+
+  <script src="js/main.js"></script>
+</body>
+</html>
