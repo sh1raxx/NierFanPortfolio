@@ -31,7 +31,7 @@ body {
     radial-gradient(ellipse at 85% 60%, rgba(200,169,110,0.03) 0%, transparent 55%);
   color: var(--text-primary);
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: clamp(14px, 10.4px + 0.25vw, 20px);
   line-height: 1.6;
   overflow-x: hidden;
   cursor: crosshair;
@@ -394,7 +394,7 @@ body {
 
 /* ── TYPING ROLE ── */
 .hero-role {
-  font-size: 15px;
+  font-size: clamp(15px, 10.8px + 0.29vw, 22px);
   color: var(--accent);
   letter-spacing: 0.12em;
   margin-bottom: 44px;
@@ -437,7 +437,7 @@ body {
 }
 
 .hero-stat-value {
-  font-size: 13px;
+  font-size: clamp(13px, 10px + 0.21vw, 18px);
   letter-spacing: 0.08em;
   color: var(--text-secondary);
 }
@@ -627,7 +627,7 @@ section:not(#hero) + section:not(#hero) {
   gap: 10px;
 }
 
-.skill-name { font-size: 12px; color: var(--text-primary); letter-spacing: 0.04em; }
+.skill-name { font-size: clamp(12px, 9px + 0.21vw, 17px); color: var(--text-primary); letter-spacing: 0.04em; }
 
 .skill-bar {
   width: 90px;
@@ -762,7 +762,7 @@ section:not(#hero) + section:not(#hero) {
 
 .project-title {
   font-family: var(--font-head);
-  font-size: 19px;
+  font-size: clamp(19px, 13.5px + 0.38vw, 28px);
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -770,7 +770,7 @@ section:not(#hero) + section:not(#hero) {
 }
 
 .project-desc {
-  font-size: 12px;
+  font-size: clamp(12px, 9px + 0.21vw, 17px);
   color: var(--text-secondary);
   line-height: 1.75;
 }
@@ -962,7 +962,7 @@ section:not(#hero) + section:not(#hero) {
 }
 
 .contact-desc {
-  font-size: 14px;
+  font-size: clamp(14px, 10.4px + 0.25vw, 20px);
   color: var(--text-secondary);
   line-height: 1.9;
 }
@@ -1020,7 +1020,7 @@ section:not(#hero) + section:not(#hero) {
   color: var(--text-dim);
 }
 
-.contact-channel-value { font-size: 13px; letter-spacing: 0.04em; }
+.contact-channel-value { font-size: clamp(13px, 10px + 0.21vw, 18px); letter-spacing: 0.04em; }
 
 .contact-channel-arrow {
   color: var(--accent-dim);
