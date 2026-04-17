@@ -699,6 +699,58 @@ section:not(#hero) + section:not(#hero) {
   margin-top: -6px;
 }
 
+/* Controls block */
+.project-controls {
+  margin-top: -4px;
+  padding: 10px 12px;
+  border: 1px solid rgba(200, 169, 110, 0.18);
+  background: rgba(200, 169, 110, 0.03);
+}
+.controls-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.controls-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.controls-list li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+.controls-list .key {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid var(--accent-dim);
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  background: rgba(0, 0, 0, 0.25);
+  line-height: 1.2;
+  min-width: 22px;
+  text-align: center;
+}
+.controls-list .key-sep {
+  color: var(--text-dim);
+  padding: 0 2px;
+}
+.controls-list .key-desc {
+  margin-left: 8px;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 /* "Still in Development" label */
 .project-link-inactive {
   font-size: 10px;
