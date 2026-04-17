@@ -6,6 +6,23 @@
     <title>Unity Web Player | BubulletHell</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <style>
+      /* Override template: stretch canvas to full iframe viewport */
+      html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+      #unity-container.unity-desktop {
+        left: 0; top: 0; transform: none;
+        width: 100%; height: 100%;
+        display: flex; flex-direction: column;
+      }
+      #unity-canvas {
+        width: 100% !important;
+        height: 100% !important;
+        display: block;
+        flex: 1 1 auto;
+        min-height: 0;
+      }
+      #unity-footer { flex: 0 0 38px; }
+    </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -103,9 +120,9 @@
 
 
       } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "1600px";
-        canvas.style.height = "900px";
+        // Desktop style: stretch canvas to the whole available iframe area
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
