@@ -289,12 +289,14 @@ function initSysMessages() {
 function initGameModal() {
   const overlay = document.getElementById('game-modal');
   const iframe  = document.getElementById('game-iframe');
-  const openBtn = document.getElementById('play-featherink');
+  const title   = document.getElementById('game-modal-title');
+  const openBtns = document.querySelectorAll('.play-btn[data-game-src]');
   const closeBtn = document.getElementById('game-modal-close');
-  if (!overlay || !openBtn) return;
+  if (!overlay || !openBtns.length) return;
 
-  function openModal() {
-    iframe.src = iframe.dataset.src;
+  function openModal(src, label) {
+    iframe.src = src;
+    if (title && label) title.textContent = '> ' + label;
     overlay.classList.add('active');
     overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -307,7 +309,11 @@ function initGameModal() {
     setTimeout(() => { iframe.src = ''; }, 350);
   }
 
-  openBtn.addEventListener('click', openModal);
+  openBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      openModal(btn.dataset.gameSrc, btn.dataset.gameTitle);
+    });
+  });
   closeBtn.addEventListener('click', closeModal);
 
   overlay.addEventListener('click', (e) => {
